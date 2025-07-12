@@ -325,16 +325,39 @@ body.dark-mode .social-icon {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: var(--spacing-2xl);
-    align-items: start;
+    align-items: center;
 }
 .profile-image {
-    width: 200px; height: 200px;
+    width: 200px; 
+    height: auto; /* Hauteur automatique - CHANGEMENT ICI */
+    min-height: 200px; /* Hauteur minimum pour maintenir l'esthétique */
     border-radius: var(--border-radius-xl);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-weight: 600; font-size: var(--font-size-sm); text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: white; 
+    font-weight: 600; 
+    font-size: var(--font-size-sm); 
+    text-align: center;
     box-shadow: 0 8px 32px rgba(29,185,84,0.3);
-    position: relative; overflow: hidden;
+    position: relative; 
+    overflow: hidden;
+    /* Ajout pour gérer l'image */
+    padding: 0; /* Suppression du padding par défaut */
+}
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintient les proportions et remplit le conteneur */
+    object-position: center; /* Centre l'image */
+    border-radius: var(--border-radius-xl);
+}
+.profile-image.adaptive img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-xl);
 }
 .profile-image::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -763,10 +786,13 @@ body.dark-mode footer {
         grid-template-columns: 1fr; 
         text-align: center; 
         gap: var(--spacing-xl);
+        align-items: center;
     }
     
     .profile-image { 
         margin: 0 auto;
+        width: 180px;
+        min-height: 180px;
     }
     
     .skills-grid { 
