@@ -508,6 +508,7 @@ body.dark-mode .project-description { color: var(--text-secondary-dark);}
     transform: translateY(-2px);
 }
 
+
 /* Contact Section */
 .contact-content {
     max-width: 600px;
