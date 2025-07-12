@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilian Valette - Portfolio</title>
+    <meta name="description" content="Portfolio personnel de Lilian Valette, étudiant en informatique passionné par le développement web et l'innovation technologique.">
+    <meta name="keywords" content="développeur, portfolio, web, javascript, python, react, étudiant informatique">
+    <meta name="author" content="Lilian Valette">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lilian Valette - Portfolio">
+    <meta property="og:description" content="Portfolio personnel de Lilian Valette, étudiant en informatique">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lilianvalette.fr">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-bar-mobile">
+                <button class="burger-menu" aria-label="Menu" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-controls">
+                    <select id="language-selector">
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="en">🇬🇧 English</option>
+                    </select>
+                    <button id="theme-toggle" data-fr="Mode Sombre" data-en="Dark Mode">Mode Sombre</button>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+                <li><a href="#skills" data-fr="Compétences" data-en="Skills">Compétences</a></li>
+                <li><a href="#projects" data-fr="Projets" data-en="Projects">Projets</a></li>
+                <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Lilian Valette</h1>
+                <p class="hero-tagline" data-fr="Développeur Full-Stack Passionné" data-en="Passionate Full-Stack Developer">Développeur Full-Stack Passionné</p>
+                <p class="hero-intro" data-fr="Étudiant en informatique avec une passion pour l'innovation technologique et le développement d'applications web modernes. Toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage." data-en="Computer science student with a passion for technological innovation and modern web application development. Always looking for new challenges and learning opportunities.">Étudiant en informatique avec une passion pour l'innovation technologique et le développement d'applications web modernes. Toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage.</p>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</a>
+                    <a href="cv-lilian-valette.pdf" class="btn btn-secondary" download data-fr="Télécharger CV" data-en="Download CV">Télécharger CV</a>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/lilianvalette" target="_blank" class="social-icon" aria-label="GitHub">
+                            <img src="img/github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://linkedin.com/in/lilianvalette" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <img src="img/linkedin_icon.png" alt="LinkedIn">
+                        </a>
+                        <a href="mailto:lilian.valette@example.com" class="social-icon" aria-label="Email">
+                            <img src="img/email_icon.jpg" alt="Email">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-card">
+            <h2 data-fr="À propos de moi" data-en="About Me">À propos de moi</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <span data-fr="Photo de profil" data-en="Profile Picture">Photo de profil</span>
+                </div>
+                <div class="about-text">
+                    <p data-fr="Bonjour ! Je suis Lilian Valette, étudiant en 3ème année d'informatique à l'Université de Technologie. Passionné par le développement web et les nouvelles technologies, je me spécialise dans la création d'applications web modernes et performantes." data-en="Hello! I'm Lilian Valette, a 3rd-year computer science student at the University of Technology. Passionate about web development and new technologies, I specialize in creating modern and efficient web applications.">Bonjour ! Je suis Lilian Valette, étudiant en 3ème année d'informatique à l'Université de Technologie. Passionné par le développement web et les nouvelles technologies, je me spécialise dans la création d'applications web modernes et performantes.</p>
+                    
+                    <p data-fr="Mon parcours m'a permis d'acquérir une solide expérience en développement front-end et back-end, avec une préférence pour les technologies JavaScript modernes. J'aime résoudre des problèmes complexes et créer des solutions innovantes qui améliorent l'expérience utilisateur." data-en="My journey has allowed me to gain solid experience in front-end and back-end development, with a preference for modern JavaScript technologies. I enjoy solving complex problems and creating innovative solutions that improve user experience.">Mon parcours m'a permis d'acquérir une solide expérience en développement front-end et back-end, avec une préférence pour les technologies JavaScript modernes. J'aime résoudre des problèmes complexes et créer des solutions innovantes qui améliorent l'expérience utilisateur.</p>
+                    
+                    <p data-fr="Actuellement à la recherche d'un stage de fin d'études ou d'une première expérience professionnelle, je suis motivé par l'envie d'apprendre et de contribuer à des projets ambitieux dans une équipe dynamique." data-en="Currently looking for an end-of-studies internship or first professional experience, I am motivated by the desire to learn and contribute to ambitious projects in a dynamic team.">Actuellement à la recherche d'un stage de fin d'études ou d'une première expérience professionnelle, je suis motivé par l'envie d'apprendre et de contribuer à des projets ambitieux dans une équipe dynamique.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-card">
+            <h2 data-fr="Compétences Techniques" data-en="Technical Skills">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-fr="Langages de Programmation" data-en="Programming Languages">Langages de Programmation</h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <img src="img/html_icon.png" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/css_icon.png" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/javascript_icon.png" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/python_icon.png" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-fr="Frameworks & Bibliothèques" data-en="Frameworks & Libraries">Frameworks & Bibliothèques</h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <img src="img/react_icon.png" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/nodejs_icon.png" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-fr="Outils & Technologies" data-en="Tools & Technologies">Outils & Technologies</h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <img src="img/git_icon.png" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/vscode_icon.png" alt="VS Code">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/docker_icon.png" alt="Docker">
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Webpack</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Postman</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-fr="Bases de Données" data-en="Databases">Bases de Données</h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <img src="img/mysql_icon.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-badge">
+                            <img src="img/mongodb_icon.jpg" alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-badge">
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-card">
+            <h2 data-fr="Projets Récents" data-en="Recent Projects">Projets Récents</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <span data-fr="Capture d'écran du projet" data-en="Project Screenshot">Capture d'écran du projet</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-fr="Application E-commerce" data-en="E-commerce Application">Application E-commerce</h3>
+                        <p class="project-description" data-fr="Application web complète de commerce électronique développée avec React et Node.js. Fonctionnalités incluant la gestion des produits, panier d'achat, système de paiement et interface d'administration." data-en="Complete e-commerce web application developed with React and Node.js. Features include product management, shopping cart, payment system and admin interface.">Application web complète de commerce électronique développée avec React et Node.js. Fonctionnalités incluant la gestion des produits, panier d'achat, système de paiement et interface d'administration.</p>
+                        <div class="project-tech">
+                            <strong data-fr="Technologies :" data-en="Technologies:">Technologies :</strong>
+                            <span>React, Node.js, Express, MongoDB, Stripe API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/lilianvalette/ecommerce-app" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://ecommerce-demo.lilianvalette.fr" target="_blank" class="project-link" data-fr="Démo Live" data-en="Live Demo">Démo Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <span data-fr="Capture d'écran du projet" data-en="Project Screenshot">Capture d'écran du projet</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-fr="Gestionnaire de Tâches" data-en="Task Manager">Gestionnaire de Tâches</h3>
+                        <p class="project-description" data-fr="Application de gestion de tâches collaborative avec interface moderne et fonctionnalités temps réel. Permet la création d'équipes, attribution de tâches et suivi de progression." data-en="Collaborative task management application with modern interface and real-time features. Allows team creation, task assignment and progress tracking.">Application de gestion de tâches collaborative avec interface moderne et fonctionnalités temps réel. Permet la création d'équipes, attribution de tâches et suivi de progression.</p>
+                        <div class="project-tech">
+                            <strong data-fr="Technologies :" data-en="Technologies:">Technologies :</strong>
+                            <span>Vue.js, Socket.io, Python Flask, PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/lilianvalette/task-manager" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://tasks.lilianvalette.fr" target="_blank" class="project-link" data-fr="Démo Live" data-en="Live Demo">Démo Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <span data-fr="Capture d'écran du projet" data-en="Project Screenshot">Capture d'écran du projet</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-fr="API Météo Intelligente" data-en="Smart Weather API">API Météo Intelligente</h3>
+                        <p class="project-description" data-fr="API REST développée en Python qui agrège plusieurs sources météorologiques et fournit des prédictions personnalisées basées sur l'historique et les préférences utilisateur." data-en="REST API developed in Python that aggregates multiple weather sources and provides personalized predictions based on history and user preferences.">API REST développée en Python qui agrège plusieurs sources météorologiques et fournit des prédictions personnalisées basées sur l'historique et les préférences utilisateur.</p>
+                        <div class="project-tech">
+                            <strong data-fr="Technologies :" data-en="Technologies:">Technologies :</strong>
+                            <span>Python, FastAPI, Redis, Docker, OpenWeatherMap API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/lilianvalette/weather-api" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://api.weather.lilianvalette.fr/docs" target="_blank" class="project-link" data-fr="Documentation" data-en="Documentation">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-card">
+            <div class="contact-content">
+                <h2 data-fr="Restons en Contact" data-en="Let's Stay in Touch">Restons en Contact</h2>
+                <p class="contact-intro" data-fr="Vous avez un projet en tête ? Une opportunité à discuter ? N'hésitez pas à me contacter !" data-en="Do you have a project in mind? An opportunity to discuss? Feel free to contact me!">Vous avez un projet en tête ? Une opportunité à discuter ? N'hésitez pas à me contacter !</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label class="form-label" data-fr="Nom complet" data-en="Full Name">Nom complet</label>
+                        <input type="text" class="form-input" data-fr-placeholder="Votre nom complet" data-en-placeholder="Your full name" placeholder="Votre nom complet" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-fr="Adresse email" data-en="Email Address">Adresse email</label>
+                        <input type="email" class="form-input" data-fr-placeholder="votre.email@exemple.com" data-en-placeholder="your.email@example.com" placeholder="votre.email@exemple.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-fr="Sujet" data-en="Subject">Sujet</label>
+                        <input type="text" class="form-input" data-fr-placeholder="Sujet de votre message" data-en-placeholder="Subject of your message" placeholder="Sujet de votre message" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" data-fr="Message" data-en="Message">Message</label>
+                        <textarea class="form-textarea" data-fr-placeholder="Décrivez votre projet ou votre demande..." data-en-placeholder="Describe your project or request..." placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" data-fr="Envoyer le Message" data-en="Send Message">Envoyer le Message</button>
+                </form>
+                
+                <div class="social-links">
+                    <a href="https://github.com/lilianvalette" target="_blank" class="social-icon" aria-label="GitHub">
+                        <img src="img/github_icon.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/lilianvalette" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <img src="img/linkedin_icon.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto:lilian.valette@example.com" class="social-icon" aria-label="Email">
+                        <img src="img/email_icon.jpg" alt="Email">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-fr="&copy; 2025 Lilian Valette. Tous droits réservés. Développé avec passion ❤️" data-en="&copy; 2025 Lilian Valette. All rights reserved. Developed with passion ❤️">&copy; 2025 Lilian Valette. Tous droits réservés. Développé avec passion ❤️</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
