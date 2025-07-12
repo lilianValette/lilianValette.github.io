@@ -724,17 +724,66 @@ body.dark-mode footer {
 }
 /* -------- Desktop only -------- */
 @media (min-width: 769px) {
-    .nav-bar-mobile { display: none !important;}
-    .burger-menu { display: none !important;}
+    .nav-bar-mobile { display: none !important; }
     .nav-menu {
         display: flex !important;
-        position: static !important;
         flex-direction: row !important;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--spacing-xl);
+        margin: 0;
+        padding: 0;
+        position: static !important;
         background: none !important;
         box-shadow: none !important;
         border-bottom: none !important;
-        padding: 0 !important;
         border-radius: 0 !important;
+    }
+    .desktop-controls {
+        display: flex !important;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-left: auto; /* pousse à droite */
+    }
+    /* Tu peux adapter le select et le bouton comme sur mobile */
+    #language-selector-desktop {
+        background: var(--bg-secondary-light);
+        color: var(--text-primary-light);
+        border: 1px solid var(--border-light);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        min-width: 120px;
+    }
+    body.dark-mode #language-selector-desktop {
+        background: var(--bg-secondary-dark);
+        color: var(--text-primary-dark);
+        border-color: var(--border-dark);
+    }
+    #language-selector-desktop:hover, #language-selector-desktop:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(29,185,84,0.1);
+        outline: none;
+    }
+    #theme-toggle-desktop {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        border: none;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        border-radius: var(--border-radius-full);
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        box-shadow: 0 2px 8px rgba(29,185,84,0.3);
+        margin-left: var(--spacing-md);
+    }
+    #theme-toggle-desktop:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(29,185,84,0.4);
     }
 }
 /* -------- Small mobile -------- */
