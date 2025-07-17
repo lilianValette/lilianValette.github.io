@@ -1,4 +1,3 @@
- - Theme du site adaptatif
  - image du projet bomberman
  - cookies
  - icone mail et github (theme clair/sombre)

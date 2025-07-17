@@ -81,27 +81,42 @@ document.addEventListener("DOMContentLoaded", () => {
             this.toggle = document.getElementById("theme-toggle");
             this.init();
         }
-
+    
         init() {
             if (this.toggle) {
                 this.toggle.addEventListener("click", () => this.toggleTheme());
-
-                // Load saved theme
-                if (localStorage.getItem("darkMode") === "true") {
-                    document.body.classList.add("dark-mode");
-                }
-
+            
+                // Load theme: priorité au localStorage, sinon détection système
+                this.loadTheme();
                 this.updateToggleText();
             }
         }
-
+    
+        loadTheme() {
+            const savedTheme = localStorage.getItem("darkMode");
+            
+            if (savedTheme !== null) {
+                // Si un thème a été sauvegardé, l'utiliser
+                if (savedTheme === "true") {
+                    document.body.classList.add("dark-mode");
+                }
+            } else {
+                // Sinon, détecter le thème système
+                const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                if (prefersDarkMode) {
+                    document.body.classList.add("dark-mode");
+                }
+            }
+        }
+    
         toggleTheme() {
             document.body.classList.toggle("dark-mode");
             const isDarkMode = document.body.classList.contains("dark-mode");
             localStorage.setItem("darkMode", isDarkMode);
             this.updateToggleText();
         }
-
+    
         updateToggleText() {
             if (this.toggle && this.languageManager) {
                 this.languageManager.updateThemeToggleText(this.languageManager.getCurrentLanguage());
