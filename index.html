@@ -312,27 +312,23 @@
                 <h2 data-fr="Restons en Contact" data-en="Let's Stay in Touch">Restons en Contact</h2>
                 <p class="contact-intro" data-fr="Vous avez un projet en tête ? Une opportunité à discuter ? N'hésitez pas à me contacter !" data-en="Do you have a project in mind? An opportunity to discuss? Feel free to contact me!">Vous avez un projet en tête ? Une opportunité à discuter ? N'hésitez pas à me contacter !</p>
                 
-                <form class="contact-form">
+                <form action="https://formspree.io/f/xblkdwgj" method="POST" class="contact-form">
                     <div class="form-group">
                         <label class="form-label" data-fr="Nom complet" data-en="Full Name">Nom complet</label>
-                        <input type="text" class="form-input" data-fr-placeholder="Votre nom complet" data-en-placeholder="Your full name" placeholder="Votre nom complet" required>
+                        <input type="text" name="name" class="form-input" data-fr-placeholder="Votre nom complet" data-en-placeholder="Your full name" placeholder="Votre nom complet" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label class="form-label" data-fr="Adresse email" data-en="Email Address">Adresse email</label>
-                        <input type="email" class="form-input" data-fr-placeholder="votre.email@exemple.com" data-en-placeholder="your.email@example.com" placeholder="votre.email@exemple.com" required>
+                       <label class="form-label" data-fr="Adresse email" data-en="Email Address">Adresse email</label>
+                        <input type="email" name="email" class="form-input" data-fr-placeholder="votre.email@exemple.com" data-en-placeholder="your.email@example.com" placeholder="votre.email@exemple.com" required>
                     </div>
-                    
                     <div class="form-group">
                         <label class="form-label" data-fr="Sujet" data-en="Subject">Sujet</label>
-                        <input type="text" class="form-input" data-fr-placeholder="Sujet de votre message" data-en-placeholder="Subject of your message" placeholder="Sujet de votre message" required>
+                        <input type="text" name="subject" class="form-input" data-fr-placeholder="Sujet de votre message" data-en-placeholder="Subject of your message" placeholder="Sujet de votre message" required>
                     </div>
-                    
                     <div class="form-group">
                         <label class="form-label" data-fr="Message" data-en="Message">Message</label>
-                        <textarea class="form-textarea" data-fr-placeholder="Décrivez votre projet ou votre demande..." data-en-placeholder="Describe your project or request..." placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                        <textarea name="message" class="form-textarea" data-fr-placeholder="Décrivez votre projet ou votre demande..." data-en-placeholder="Describe your project or request..." placeholder="Décrivez votre projet ou votre demande..." required></textarea>
                     </div>
-                    
                     <button type="submit" class="btn btn-primary" data-fr="Envoyer le Message" data-en="Send Message">Envoyer le Message</button>
                 </form>
                 

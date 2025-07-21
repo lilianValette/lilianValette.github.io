@@ -1,4 +1,5 @@
  - cookies
  - icone mail et github (theme clair/sombre)
- - faire fonctionner les mails
+ - faire fonctionner les mails et popup de confirmation d'envoie
  - verifier les liens et documents
+ - contact@lilianvalette.fr
