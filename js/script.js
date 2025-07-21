@@ -81,20 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
             this.toggle = document.getElementById("theme-toggle");
             this.init();
         }
-    
+
         init() {
             if (this.toggle) {
                 this.toggle.addEventListener("click", () => this.toggleTheme());
-            
+
                 // Load theme: priorité au localStorage, sinon détection système
                 this.loadTheme();
                 this.updateToggleText();
             }
         }
-    
+
         loadTheme() {
             const savedTheme = localStorage.getItem("darkMode");
-            
+
             if (savedTheme !== null) {
                 // Si un thème a été sauvegardé, l'utiliser
                 if (savedTheme === "true") {
@@ -103,20 +103,20 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 // Sinon, détecter le thème système
                 const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
+
                 if (prefersDarkMode) {
                     document.body.classList.add("dark-mode");
                 }
             }
         }
-    
+
         toggleTheme() {
             document.body.classList.toggle("dark-mode");
             const isDarkMode = document.body.classList.contains("dark-mode");
             localStorage.setItem("darkMode", isDarkMode);
             this.updateToggleText();
         }
-    
+
         updateToggleText() {
             if (this.toggle && this.languageManager) {
                 this.languageManager.updateThemeToggleText(this.languageManager.getCurrentLanguage());
@@ -227,6 +227,109 @@ document.addEventListener("DOMContentLoaded", () => {
                     badge.style.transform = 'translateY(0) scale(1)';
                 });
             });
+        }
+    }
+
+    // Contact Form Handler pour Formspree (popup de confirmation)
+    class ContactForm {
+        constructor(languageManager) {
+            this.languageManager = languageManager;
+            this.form = document.querySelector('.contact-form');
+            this.init();
+        }
+
+        init() {
+            if (this.form) {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            }
+        }
+
+        async handleSubmit(e) {
+            e.preventDefault();
+
+            const data = {
+                name: this.form.querySelector('input[name="name"]').value,
+                email: this.form.querySelector('input[name="email"]').value,
+                subject: this.form.querySelector('input[name="subject"]').value,
+                message: this.form.querySelector('textarea[name="message"]').value
+            };
+
+            try {
+                const response = await fetch('https://formspree.io/f/xblkdwgj', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    this.showSuccess();
+                    this.form.reset();
+                } else {
+                    this.showError();
+                }
+            } catch (error) {
+                this.showError();
+            }
+        }
+
+        showSuccess() {
+            const lang = this.languageManager.getCurrentLanguage();
+            const message = lang === "fr"
+                ? 'Votre message a bien été envoyé.'
+                : 'Your message has been sent.';
+
+            this.showNotification(message, 'success');
+        }
+
+        showError() {
+            const lang = this.languageManager.getCurrentLanguage();
+            const message = lang === "fr"
+                ? 'Une erreur est survenue. Veuillez réessayer plus tard.'
+                : 'An error occurred. Please try again later.';
+
+            this.showNotification(message, 'error');
+        }
+
+        showNotification(message, type) {
+            // Utilise le code de notification existant pour l'affichage popup
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            padding: 18px 32px 18px 22px;
+            border-radius: 16px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.08rem;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 32px rgba(29,185,84,0.18);
+            background: linear-gradient(135deg, ${type === 'success' ? 'var(--primary-color), var(--secondary-color)' : '#E22134, var(--accent-color)'});
+            border: none;
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(.69,.02,.65,.99), opacity 0.3s;
+            opacity: 0.97;
+        `;
+
+            document.body.appendChild(notification);
+
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Remove after delay
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 4000);
         }
     }
 
