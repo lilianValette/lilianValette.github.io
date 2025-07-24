@@ -55,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     metaDesc.content = "Portfolio personnel de Lilian Valette, étudiant en informatique passionné par le développement web et l'innovation technologique.";
                 }
             }
+            
+            // Update cookie banner language if it exists
+            if (window.cookieBannerInstance) {
+                window.cookieBannerInstance.updateLanguage();
+            }
         }
 
         updateThemeToggleText(lang) {
@@ -380,6 +385,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactForm = new ContactForm(languageManager);
     const parallaxEffect = new ParallaxEffect();
     const projectCardEffects = new ProjectCardEffects();
+    
+    // Initialize cookie banner and store globally for language updates
+    const cookieBanner = new CookieBanner(languageManager);
+    window.cookieBannerInstance = cookieBanner;
 
     // Add loading animation
     document.body.style.opacity = '0';
