@@ -3,3 +3,4 @@
  - anti spam
  - verifier les liens et documents
  - contact@lilianvalette.fr
+ - améliorer les méta données
