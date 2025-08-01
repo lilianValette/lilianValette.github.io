@@ -1,5 +1,4 @@
  - icone mail et github (theme clair/sombre)
  - anti spam
- - verifier les liens et documents
  - contact@lilianvalette.fr
  - améliorer les méta données
