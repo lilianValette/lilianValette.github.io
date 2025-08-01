@@ -1039,3 +1039,22 @@ body.dark-mode .cookie-btn-reject:hover {
 /* =========================================================
    END OF CSS
 ========================================================= */
+
+@media (max-width: 768px) {
+    /* Espacement entre le bouton "Me Contacter" et les liens sociaux dans la hero section */
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--spacing-lg); /* Augmente l'espacement entre les éléments enfants */
+        margin-bottom: var(--spacing-xl); /* Ajoute de l'espace sous le bloc d'actions */
+    }
+
+    /* Ajoute de l'espace entre le bouton principal et les icônes sociales */
+    .hero-actions .btn-primary {
+        margin-bottom: var(--spacing-lg); /* Espace entre le bouton et les icônes */
+    }
+
+    /* Espacement entre les icônes sociales */
+    .hero-actions .social-links {
+        gap: var(--spacing-lg); /* Espace entre les icônes */
+    }
+}
